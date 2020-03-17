@@ -327,6 +327,8 @@ function prepEvents(cb)	{
 		M.data.jhu.filter(k=>k.date_str>max_martine && !k.country.match(/china/i) )
 	);
 
+	data = data.filter(d=>d.country!='Malaysia');
+
 	var countries = d3.nest()
 									.key(d=>d.country)
 									.entries(data)
@@ -379,7 +381,7 @@ function prepEvents(cb)	{
 														date_str:k.date_str,
 														description: [
 															'First',
-															(d.first_confirmed_cases==1?'death':d.first_confirmed_cases+' deaths'),
+															(d.first_deaths_cases==1?'death':d.first_deaths_cases+' deaths'),
 															'in',
 															d.key
 														].join(' '),
