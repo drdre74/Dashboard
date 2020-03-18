@@ -1,5 +1,5 @@
 
-# coronavirus_dashboard
+# Dashboard
 
 - Visualizations to keep tracks of coronavirus/covid19 related numbers
 - Mainly intended for use on bigger displays (TV, kiosks) running on raspberry Pi 4
